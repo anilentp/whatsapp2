@@ -25,7 +25,7 @@
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
-  margin-top: -32x; }
+  margin-top: -32px; }
 
 .h5 {
   margin-left: 12px;
@@ -37,13 +37,13 @@
   margin: -8%; }
 
 .bg-green {
-  background-color: #009683;
+  background-color: $bg-green;
   max-height: 200px;
   height: 100%;
   padding-top: 10%; }
 
 .bg-gray {
-  background-color: #E2E0DD; }
+  background-color: $bg-gray; }
 
 .bg-img-solid {
   background-color: #efe9e2;
@@ -53,14 +53,14 @@
   background: url("../image/chat-panel-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 840px; }
+  height: 640px; }
 
 .namegroup {
   background-color: #87868b; }
 
 .contact {
-  max-width: 45px;
-  max-height: 45px;
+  max-width: $p45;
+  max-height: $p45;
   border-radius: 50%;
   width: 100%; }
 
@@ -100,7 +100,7 @@
   margin-left: 3%; }
 
 .bg-white {
-  background-color: #FEFEFE;
+  background-color: $bg-white;
   padding: 3% 2%;
   border: 1px solid #D1CDC8; }
 
@@ -114,16 +114,16 @@ p {
   margin: 0 0 -10px; }
 
 .celeste {
-  color: #30D2F1; }
+  color: $celeste; }
 
 .rosado {
-  color: #FD3195; }
+  color: $rosado; }
 
 .verde {
-  color: #00D196; }
+  color: $verde; }
 
 .dorado {
-  color: #F4BA26; }
+  color: $dorado; }
 
 .send-txt {
   display: inline; }
@@ -133,5 +133,19 @@ p {
 
 .smile {
   font-size: 20px; }
+
+/*scrolls*/
+.scroll{
+	height: 600px;
+    overflow: scroll;
+    overflow-x:hidden
+}
+.scroll1{
+	margin-top: 5px;
+  	height: 620px;
+  	width: 675px;
+  	overflow: scroll;
+  	overflow-x:hidden;
+}
 
 /*# sourceMappingURL=main.css.map */
