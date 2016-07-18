@@ -1,3 +1,137 @@
+.gian {
+  width: 45px;
+  height: 45px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: -13px; }
 
+.fa-bars {
+  color: #87868b;
+  margin-top: 12px;
+  margin-left: 28px; }
+
+.fa-comment {
+  color: #87868b;
+  margin-left: 260px; }
+
+.list-group {
+  margin-left: -16px;
+  margin-top: 3px; }
+
+.logo-codecademy {
+  width: 45px;
+  height: 45px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: -32x; }
+
+.h5 {
+  margin-left: 12px;
+  margin-top: -11px;
+  padding: 2px; }
+
+/* Inicio estilos Belen */
+.pagina-completa {
+  margin: -8%; }
+
+.bg-green {
+  background-color: #009683;
+  max-height: 200px;
+  height: 100%;
+  padding-top: 10%; }
+
+.bg-gray {
+  background-color: #E2E0DD; }
+
+.bg-img-solid {
+  background-color: #efe9e2;
+  margin-left: -15px; }
+
+.bg-img {
+  background: url("../image/chat-panel-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 840px; }
+
+.namegroup {
+  background-color: #87868b; }
+
+.contact {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+  width: 100%; }
+
+.panelcontc {
+  display: inline-block;
+  background-color: #F8F8F8;
+  width: 104%;
+  margin-left: -15px;
+  border: 1px #DEDBD7 solid;
+  padding: 1% 2% 0 1%; }
+
+.panelmsg {
+  max-height: 1000px;
+  height: 100%;
+  margin-top: -2%;
+  margin-left: -2%; }
+
+.msgs-rcb {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: block;
+  padding: 1% 1% 2% 1%;
+  width: 51%;
+  margin: 2% 0 2% 3%; }
+
+.msgs-snd {
+  background-color: #D8F9C3;
+  border-radius: 10px;
+  display: block;
+  padding: 1% 1% 2% 1%;
+  width: 51%;
+  margin: 2% 0; }
+
+/* MODIFICACIONES NUEVAS */
+.namecontact {
+  display: inline-block;
+  margin-left: 3%; }
+
+.bg-white {
+  background-color: #FEFEFE;
+  padding: 3% 2%;
+  border: 1px solid #D1CDC8; }
+
+.navbar-header {
+  padding: 16px; }
+
+.contact-msg {
+  margin-top: -20px; }
+
+p {
+  margin: 0 0 -10px; }
+
+.celeste {
+  color: #30D2F1; }
+
+.rosado {
+  color: #FD3195; }
+
+.verde {
+  color: #00D196; }
+
+.dorado {
+  color: #F4BA26; }
+
+.send-txt {
+  display: inline; }
+
+.mensaje {
+  width: 100%; }
+
+.smile {
+  font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */

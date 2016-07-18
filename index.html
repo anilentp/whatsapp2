@@ -31,6 +31,19 @@
 						<div class="contact-msg">
 							<div class="bg-white">
 								<input type="text" class="form-control" placeholder="Search">
+								<!-- 
+							AVERIGUAR SOBRE FILTER DE ANGULAR!
+								<form>
+				      				Enter subject: <input type="text" ng-model="subjectName" />
+				    </form>
+				    <p>Subject:</p>
+				    <ul>
+				      <li ng-repeat="subject in student.subjects | filter: subjectName">
+				         {{ subject.name + ', marks:' + subject.marks }}
+				      </li>
+				    </ul>
+				  	</div>
+			   -->
 							</div>
 							<div class="contactos bg-white">
 								<img src="image/logocodeacademy.png" class="pull-left logo-codecademy">
@@ -182,6 +195,8 @@
 		</section>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="../../libs/angular.min.js"></script>
+  		<script src="../../4.Controllers/studentController.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>	
 </body>
 </html>
