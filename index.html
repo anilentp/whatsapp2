@@ -8,7 +8,9 @@
 	  	<link rel="shortcut icon" href="image/favicon.png" type="image/png">
 	  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CRoboto:300,400,500" media="all">
 	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	  	<link rel="stylesheet" href="css/font-awesome.min.css">
+	  	<link rel="stylesheet" href="css/icomoon.css" type="text/css">
 	  	<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body class="bg-gray">
@@ -24,28 +26,19 @@
 			      				<a class="navbar-brand" href="#">
 			        			<img class="gian" src="image/gian.jpg">
 			      				</a>
-			      				<i class="fa fa-comment fa-2x" aria-hidden="true"></i>
-			      				<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+			      				<span class="icon-dots-three-vertical"></span>
+			      				<span class="icon-message"></span>
 			    			</div>
 						</nav>
 						<div class="contact-msg">
+					<!-- buscador de chat -->
 							<div class="bg-white">
-								<input type="text" class="form-control" placeholder="Search">
-								<!-- 
-							AVERIGUAR SOBRE FILTER DE ANGULAR!
-								<form>
-				      				Enter subject: <input type="text" ng-model="subjectName" />
-				    </form>
-				    <p>Subject:</p>
-				    <ul>
-				      <li ng-repeat="subject in student.subjects | filter: subjectName">
-				         {{ subject.name + ', marks:' + subject.marks }}
-				      </li>
-				    </ul>
-				  	</div>
-			   -->
+								<div class="input-group">
+								 	<span class="input-group-addon"><a href="#"><span class="icon-search"></span></a></span>
+	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchTerm" onkeyup="doSearch()">					
+								</div>	
 							</div>
-							<!-- scroll contactos -->
+					<!-- scroll contactos -->
 							<div class="scroll">
 								<div class="contactos bg-white">
 									<img src="image/logocodeacademy.png" class="pull-left logo-codecademy">
@@ -53,7 +46,7 @@
 										<h5>Laboratoria Peru</h5>
 										<h5>Aldo: Dale dale!</h5>
 									</div>
-									<p class="pull-right">14:25</p></li>
+									<p class="pull-right">14:25</p>						
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/raymi.jpg" class="pull-left logo-codecademy">
@@ -61,7 +54,7 @@
 										<h5>Raymi Saldomando</h5>
 										<h5>La clase va bien!</h5>
 									</div>
-									<p class="pull-right">11:25</p></li>
+									<p class="pull-right">11:25</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/mariana.jpg" class="pull-left logo-codecademy">
@@ -69,7 +62,7 @@
 										<h5>Mariana Costa</h5>
 										<h5>El panel de speakers esta buenazo</h5>
 									</div>
-									<p class="pull-right">09:25</p></li>
+									<p class="pull-right">09:25</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/anamaria.jpg" class="pull-left logo-codecademy">
@@ -77,7 +70,7 @@
 										<h5>Ana Maria Martinez Franklin</h5>
 										<h5>Pues dale chamo!</h5>
 									</div>
-									<p class="pull-right">Ayer</p></li>
+									<p class="pull-right">Ayer</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/rodulfo.jpg" class="pull-left logo-codecademy">
@@ -85,7 +78,7 @@
 										<h5>Rodulfo Prieto</h5>
 										<h5>¿Cómo van las chicas?</h5>
 									</div>
-									<p class="pull-right">Martes</p></li>
+									<p class="pull-right">Martes</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/andrea.jpg" class="pull-left logo-codecademy">
@@ -93,7 +86,7 @@
 										<h5>Andrea Lamas</h5>
 										<h5>Hoy me toca clases de canto yee!</h5>
 									</div>
-									<p class="pull-right">Lunes</p></li>
+									<p class="pull-right">Lunes</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/mariapaula.jpg" class="pull-left logo-codecademy">
@@ -101,15 +94,15 @@
 										<h5>Maria Paula Rivarola</h5>
 										<h5>Wuju! esto me encanta!! en verdad!</h5>
 									</div>
-									<p class="pull-right">13/01/2016</p></li>
+									<p class="pull-right">13/01/2016</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/katy.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Katy Sanchez</h5>
 										<h5>No te preocupes, tengo el salón bajo control</h5>
-									</div>
-									<p class="pull-right">11/01/2016</p></li>
+										</div>
+									<p class="pull-right">11/01/2016</p>							
 								</div>
 								<div class="contactos bg-white">
 									<img src="image/aldo.jpg" class="pull-left logo-codecademy">
@@ -117,93 +110,93 @@
 										<h5>Aldo Alfaro</h5>
 										<h5>Van a comer?</h5>
 									</div>
-									<p class="pull-right">03/01/2016</p></li>
+									<p class="pull-right">03/01/2016</p>							
 								</div>
 							</div>
-
-
-
 						</div>
 					</div>
-					<div class="col-md-7 bg-img-solid">
-			    		<div class="panelcontc">
-			    			<div class="contacto-ppal">
-								<div class="media">
-									  <div class="media-left">
-									    <a href="#">
-									      	<img class="media-object contact" src="image/logocodeacademy.png">
-									    </a>
-									  </div>
-									 <div class="media-body">
-									    <h4 class="media-heading">Laboratoria Perú</h4>
-									    <p class="media-heading">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
-									</div>
-									<span class="pull-right fa fa-paperclip" aria-hidden="true"></span>
-			      					<span class="pull-right fa fa-bars" aria-hidden="true"></span>
+				<div class="col-md-7 bg-img-solid">
+			    	<div class="panelcontc">
+			    		<div class="contacto-ppal">
+							<div class="media">
+				        	    <div class="media-left">
+								    <a href="#">
+								      	<img class="media-object contact" src="image/logocodeacademy.png">
+								    </a>
 								</div>
-			    			</div>
-						</div>
-						<div class="bg-img">
-							<div class="panelmsg scroll1">
-								<div class="msgs-rcb pull-left">
-									<h6 class="celeste">Andrea Lamas</h6>
-									<p>Chicos han visto el nuevo corte de Aldo?</p>
-									<p class="pull-right">11:12</p></div>
-								<div class="msgs-rcb pull-left">
-									<h6 class="rosado">Mariana Costa</h6>
-									<p>¿Finalmente se corto?</p>
-									<p class="pull-right">11:13</p></div>
-								<div class="msgs-rcb pull-left">
-									<h6 class="verde">María Paula Rivarola</h6>
-									<p>Jajaja Sii finalmente de corto!!</p>
-									<p class="pull-right">11:13</p>
+								<div class="media-body">
+								    <h4 class="media-heading">Laboratoria Perú</h4>
+								    <p class="media-heading">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
 								</div>
-
-								<div class="msgs-snd pull-right">
-									<p>Antes parecia mufasa jajajaja</p>
-									<p class="pull-right">11:14</p>
-								</div>
-								<div class="msgs-snd pull-right">
-									<p>Ahora si esta decente</p>
-									<p class="pull-right">11:18</p>
-								</div>
-		
-								<div class="msgs-rcb pull-left">
-									<h6 class="celeste">Andrea Lamas</h6>
-									<p>¿Por qué se lo habrá cortado?</p>
-									<p class="pull-right">11:20</p>
-								</div>
-								<div class="msgs-rcb pull-left">
-									<h5 class="dorado">Aldo Alfaro</h5>
-									<p>Ya ya ya, hacia mucho calor que más</p>
-									<p class="pull-right">11:25</p>
-								</div>
-								<div class="msgs-rcb pull-left">
-									<h5 class="celeste">Andrea Lamas</h5>
-									<p>Esta siguiendo los pasos de Juan Diego!</p>
-									<p class="pull-right">11:30</p>
-								</div>
-								<div class="msgs-rcb pull-left">
-									<h5 class="verde">María Paula Rivarola</h5>
-									<p>Nunca!!! Juan Diego es único</p>
-									<p class="pull-right">11:31</p>
-								</div>
+								<span class="icon-dots-three-vertical "></span>
+								<span class="icon-attachment "></span>
 							</div>
+			    		</div>
+					</div>
+					<div class="bg-img">
+						<div class="panelmsg scroll1">
+							<div class="msgs-rcb pull-left">
+								<h6 class="celeste">Andrea Lamas</h6>
+								<p>Chicos han visto el nuevo corte de Aldo?</p>
+								<p class="pull-right">11:12</p>
 							</div>
-
-
-
-
-							<div class="send-text bg-img-solid">
-								<div class="smile"><i class="fa fa-smile-o"></i></div>
-								<input type="text" class="mensaje" placeholder="Escribe tu mensaje aquí">
-								<div class="smile"><i class="fa fa-microphone"></i></div>
+							<div class="msgs-rcb pull-left">
+								<h6 class="rosado">Mariana Costa</h6>
+								<p>¿Finalmente se corto?</p>
+								<p class="pull-right">11:13</p>
+							</div>
+							<div class="msgs-rcb pull-left">
+								<h6 class="verde">María Paula Rivarola</h6>
+								<p>Jajaja Sii finalmente de corto!!</p>
+								<p class="pull-right">11:13</p>
+							</div>
+							<div class="msgs-snd pull-right">
+								<p>Antes parecia mufasa jajajaja</p>
+								<p class="pull-right">11:14</p>
+							</div>
+							<div class="msgs-snd pull-right">
+								<p>Ahora si esta decente</p>
+								<p class="pull-right">11:18</p>
+							</div>
+							<div class="msgs-rcb pull-left">
+								<h6 class="celeste">Andrea Lamas</h6>
+								<p>¿Por qué se lo habrá cortado?</p>
+								<p class="pull-right">11:20</p>
+							</div>
+							<div class="msgs-rcb pull-left">
+								<h5 class="dorado">Aldo Alfaro</h5>
+								<p>Ya ya ya, hacia mucho calor que más</p>
+								<p class="pull-right">11:25</p>
+							</div>
+							<div class="msgs-rcb pull-left">
+								<h5 class="celeste">Andrea Lamas</h5>
+								<p>Esta siguiendo los pasos de Juan Diego!</p>
+								<p class="pull-right">11:30</p>
+							</div>
+							<div class="msgs-rcb pull-left">
+								<h5 class="verde">María Paula Rivarola</h5>
+								<p>Nunca!!! Juan Diego es único</p>
+								<p class="pull-right">11:31</p>
 							</div>
 						</div>
+					</div>
+					<!-- enviar mensajes -->
+					<div class="send-text bg-img-solid">
+						<div class="inline icon-1">
+							<a href="#" class=""><span class="icon-insert_emoticon"></span></a>
+						</div>
+						<span class="pt-5">
+							<input type="text" id="tarea" class="form-control inline escribir" placeholder="Escribe tu mensaje aquí">	
+						<span>
+						<span class="icon-2 inline ">
+							<a href="#" class=""><span class="icon-mic"></span></a>
+						</span>
 					</div>
 				</div>
 			</div>
-		</section>
+			</div>
+		</div>
+	</section>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="../../libs/angular.min.js"></script>

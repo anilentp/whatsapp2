@@ -1,3 +1,4 @@
+@import url(font-awesome.min.css);
 .gian {
   width: 45px;
   height: 45px;
@@ -25,7 +26,7 @@
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
-  margin-top: -32px; }
+  margin-top: -32x; }
 
 .h5 {
   margin-left: 12px;
@@ -37,13 +38,13 @@
   margin: -8%; }
 
 .bg-green {
-  background-color: $bg-green;
+  background-color: #009683;
   max-height: 200px;
   height: 100%;
   padding-top: 10%; }
 
 .bg-gray {
-  background-color: $bg-gray; }
+  background-color: #E2E0DD; }
 
 .bg-img-solid {
   background-color: #efe9e2;
@@ -59,8 +60,8 @@
   background-color: #87868b; }
 
 .contact {
-  max-width: $p45;
-  max-height: $p45;
+  max-width: 45px;
+  max-height: 45px;
   border-radius: 50%;
   width: 100%; }
 
@@ -100,7 +101,7 @@
   margin-left: 3%; }
 
 .bg-white {
-  background-color: $bg-white;
+  background-color: #FEFEFE;
   padding: 3% 2%;
   border: 1px solid #D1CDC8; }
 
@@ -114,16 +115,16 @@ p {
   margin: 0 0 -10px; }
 
 .celeste {
-  color: $celeste; }
+  color: #30D2F1; }
 
 .rosado {
-  color: $rosado; }
+  color: #FD3195; }
 
 .verde {
-  color: $verde; }
+  color: #00D196; }
 
 .dorado {
-  color: $dorado; }
+  color: #F4BA26; }
 
 .send-txt {
   display: inline; }
@@ -134,18 +135,41 @@ p {
 .smile {
   font-size: 20px; }
 
-/*scrolls*/
+
+
+
+
 .scroll{
-	height: 600px;
-    overflow: scroll;
-    overflow-x:hidden
+  height: 600px;
+  overflow: scroll;
+  overflow-x:hidden;
 }
+
 .scroll1{
-	margin-top: 5px;
-  	height: 620px;
-  	width: 675px;
-  	overflow: scroll;
-  	overflow-x:hidden;
+  margin-top: 5px;
+  height: 630px;
+  width: 675px;
+  overflow: scroll;
+  overflow-x:hidden;
+}
+
+.inline{
+  display: inline-block;
+}
+.icon-2{
+  float: right;
+  margin-top: 18px;
+  margin-right: 15px;
+}
+.icon-1{
+  float: left;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.escribir{
+  width: 85%;
 }
 
 /*# sourceMappingURL=main.css.map */
