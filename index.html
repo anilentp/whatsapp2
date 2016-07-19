@@ -33,12 +33,12 @@
 							<div class="bg-white">
 								<div class="input-group">
 								 	<span class="input-group-addon"><a href="#"><span class="icon-search"></span></a></span>
-	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchTerm" onkeyup="doSearch()">					
+	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchTerm" onkeyup="findMember()">					
 								</div>	
 							</div>
 					<!-- scroll contactos -->
-							<div class="scroll">
-								<div class="contactos bg-white">
+							<div class="scroll" id="datos">
+								<div class="contactos bg-white" data="0">
 									<img src="image/logocodeacademy.png" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Laboratoria Peru</h5>
@@ -46,7 +46,7 @@
 									</div>
 									<p class="pull-right">14:25</p>						
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="1">
 									<img src="image/raymi.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Raymi Saldomando</h5>
@@ -54,7 +54,7 @@
 									</div>
 									<p class="pull-right">11:25</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="2">
 									<img src="image/mariana.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Mariana Costa</h5>
@@ -62,7 +62,7 @@
 									</div>
 									<p class="pull-right">09:25</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="3">
 									<img src="image/anamaria.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Ana Maria Martinez Franklin</h5>
@@ -70,7 +70,7 @@
 									</div>
 									<p class="pull-right">Ayer</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="4">
 									<img src="image/rodulfo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Rodulfo Prieto</h5>
@@ -78,7 +78,7 @@
 									</div>
 									<p class="pull-right">Martes</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="5">
 									<img src="image/andrea.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Andrea Lamas</h5>
@@ -86,7 +86,7 @@
 									</div>
 									<p class="pull-right">Lunes</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="6">
 									<img src="image/mariapaula.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Maria Paula Rivarola</h5>
@@ -94,7 +94,7 @@
 									</div>
 									<p class="pull-right">13/01/2016</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="7">
 									<img src="image/katy.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Katy Sanchez</h5>
@@ -102,7 +102,7 @@
 										</div>
 									<p class="pull-right">11/01/2016</p>							
 								</div>
-								<div class="contactos bg-white">
+								<div class="contactos bg-white" data="8">
 									<img src="image/aldo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Aldo Alfaro</h5>
@@ -184,10 +184,10 @@
 							<a href="#" class=""><span class="icon-insert_emoticon"></span></a>
 						</div>
 						<span class="pt-5">
-							<input type="text" id="tarea" class="form-control inline escribir" placeholder="Escribe tu mensaje aquí">	
+							<input type="text" id="tarea" class="form-control inline escribir" placeholder="Escribe tu mensaje aquí" onKeyPress="return sendMessages">	
 						<span>
 						<span class="icon-2 inline ">
-							<a href="#" class=""><span class="icon-mic"></span></a>
+							<a onclick="return "href="#" id="btn-send"><span class="icon-mic"></span></a>
 						</span>
 					</div>
 				</div>
@@ -198,5 +198,16 @@
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>	
+		<script>
+		$(document).ready(function()
+			{
+				$("#btn-send").click(function()
+					{
+						$(".msgs-snd").append('<p>holaaaaaa</p>');
+
+					});	
+						});
+		
+		</script>
 </body>
 </html>

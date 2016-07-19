@@ -1,34 +1,34 @@
 //Funcion de busqueda
-function doSearch()
+function findMember()
         {
-            var tableReg = document.getElementById('datos');
-            var searchText = document.getElementById('searchTerm').value.toLowerCase();
-            var cellsOfRow="";
+            var dataarea = document.getElementById('datos');
+            var search = document.getElementById('searchTerm').value.toLowerCase();
+            var content="";
             var found=false;
-            var compareWith="";
+            var compare="";
  
             // Recorremos todas las filas con contenido de la tabla
-            for (var i = 1; i < tableReg.rows.length; i++)
+            for (var i = 1; i < dataarea.length; i++)
             {
-                cellsOfRow = tableReg.rows[i].getElementsByTagName('b'); //La busqueda en solo nombres
+                content = dataarea[i].getElementsByTagName('h5'); //La busqueda en solo nombres
                 found = false;
                 // Recorremos todas las celdas
-                for (var j = 0; j < cellsOfRow.length && !found; j++)
+                for (var j = 0; j < content.length && !found; j++)
                 {
-                    compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    compare = content[j].innerHTML.toLowerCase();
                     // Buscamos el texto en el contenido de la celda
-                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+                    if (search.length == 0 || (compare.indexOf(search) > -1))
                     {
                         found = true;
                     }
                 }
                 if(found)
                 {
-                    tableReg.rows[i].style.display = '';
+                    dataarea[i].style.display = '';
                 } else {
                     // si no ha encontrado ninguna coincidencia, esconde la
                     // fila de la tabla
-                    tableReg.rows[i].style.display = 'none';
+                    dataarea[i].style.display = 'none';
                 }
             }
         }
