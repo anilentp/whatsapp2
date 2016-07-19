@@ -43,11 +43,11 @@ var nombre = ["Laboratoria Perú", "Raymi Saldomando",
 "Andrea Lamas", "María Paula Rivarola"];
 
 // dar click y cambiar de imagen en el titular
-$(".chat").click(function(){
+$(".contacto-ppal").click(function(){     //chat clase
     var data = $(this).attr("data");
-    $(".mensaje-green").remove();
+    $(".msgs-snd").remove();
     // var imagen ="image/"+foto[data];
-    $("#hablando").html('<img src="image/' + foto[data] + ' "class="img top">');
+    $("#contact").html('<img src="image/' + foto[data] + ' "class="logo-codecademy">');
     $("#titulo").html("<b>" + nombre[data] + "</b>");
     escribirChat();
 });
