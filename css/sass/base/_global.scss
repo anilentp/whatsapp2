@@ -6,14 +6,14 @@
 	border-radius: 50px; 
 	margin-top: -13px;
 }
-.fa-bars {
-	color:#87868b;
+.icon-dots-three-vertical {
+	color:$gray;
 	margin-top: 12px;
 	margin-left: 28px;
 }
 
-.fa-comment{
-	color:#87868b;
+.icon-message{
+	color:$gray;
 	margin-left: 260px;
 }
 
@@ -40,13 +40,13 @@
 	margin: -8%;
 }
 .bg-green{
-	background-color: #009683;
+	background-color: $bg-green;
 	max-height: 200px;
 	height: 100%;
 	padding-top: 10%;
 }
 .bg-gray{
-	background-color: #E2E0DD;
+	background-color: $bg-gray;
 }
 .bg-img-solid{
 	background-color: rgba(239, 233, 226, 1);
@@ -59,7 +59,7 @@
 	height: 840px;
 }
 .namegroup{
-	background-color: #87868b;
+	background-color: $gray;
 }
 .contact{
 	max-width: 45px;
@@ -103,9 +103,12 @@
     margin-left: 3%;
 }
 .bg-white{
-	background-color: #FEFEFE;
+	background-color: $bg-white;
 	padding: 3% 2%;
 	border:1px solid #D1CDC8;
+}
+.form-control{
+	width: 90%;
 }
 .navbar-header{
 	padding: 16px;
@@ -117,16 +120,16 @@ p{
 	margin:0 0 -10px;
 }
  .celeste{
- 	color: #30D2F1;
+ 	color: $celeste;
  }
  .rosado{
- 	color: #FD3195;
+ 	color: $rosado;
  }
  .verde{
- 	color: #00D196;
+ 	color: $verde;
  }
  .dorado{
- 	color:#F4BA26 ;
+ 	color:$dorado;
  }
  .send-txt{
  	display: inline;
