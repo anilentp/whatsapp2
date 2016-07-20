@@ -33,7 +33,8 @@
 							<div class="bg-white">
 								<div class="input-group">
 								 	<span class="input-group-addon"><a href="#"><span class="icon-search"></span></a></span>
-	  								<input type="text" class="form-control" id="searchItem" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onkeyup="findMember()">
+	  								<input type="text" class="form-control" id="filter" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onkeyup="findMember()">
+	  								<!--<input type="text" class="form-control" id="searchItem" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onkeyup="findMember()"> -->
 								</div>	
 							</div>
 						<!-- scroll contactos -->
@@ -123,7 +124,7 @@
 						</div>
 					</div>
 					<div class="col-md-7 bg-img-solid">
-					<!-- CONTACTOS -->
+					<!-- CONTACTO ACTIVO LABORATORIA PERU -->
 				    	<div class="panelcontc">
 				    		<div class="contacto-ppal">
 								<div class="media">
@@ -141,7 +142,7 @@
 								</div>
 				    		</div>
 						</div>
-					<!-- PANEL DE MENSAJES -->
+					<!-- PANEL DE MENSAJES LABORATORIA PERU -->
 						<div class="bg-img">
 							<div class="panelmsg scroll1">
 								<!-- MENSAJES RECIBIDO -->
@@ -204,8 +205,7 @@
 					<!-- enviar mensajes -->
 						<div class="send-text bg-img-solid" id="mensaje">
 							<div class="inline iconos icon-1">
-								<a href="#" class="pull-left" id="emoticon" onclick="emoji()"  data-toggle="modal" data-target="#myModal"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a>
-								<!--<a href="#" class="" id="emoticon" onclick="emoji()"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a> -->
+								<a href="#" class="" id="emoticon" onclick="emoji()"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a> 
 							</div>
 							<span class="pt-5">
 								<input type="text" class="form-control inline escribir" id="tarea" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onKeyPress="return sendMessages">
@@ -215,7 +215,94 @@
 							</span>
 						</div>
 					</div>
-					
+		<!-- CONVERSACION REYMY -->
+					<!-- 
+					<div class="col-md-7 bg-img-solid">
+					<!- CONTACTO ACTIVO REYMY
+				    	<div class="panelcontc">
+				    		<div class="contacto-ppal">
+								<div class="media">
+					        	    <div class="media-left">
+									    <a class="media-object" href="#">
+									    	<img src="image/raymi.jpg" class="media-object contact logo-codecademy">
+									    </a>
+									</div>
+									<div class="media-body">
+									    <h4 class="media-heading">Raymi Saldomando</h4>
+									    <span class="media-heading inline iconos pull-right icon-dots-three-vertical"></span>
+										<span class="media-heading inline iconos pull-right icon-attachment"></span>
+									</div>
+								</div>
+				    		</div>
+						</div>
+					<!-- PANEL DE MENSAJES REYMY
+						<div class="bg-img">
+							<div class="panelmsg scroll1">
+								<!-- MENSAJES RECIBIDO 
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>Ya viste el nuevo corte de Aldo?</p>
+									<p class="pull-right">11:12</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>Antes parecia mufasa jajajaja</p>
+									<p class="pull-right">11:14</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>Ahora si esta decente</p>
+									<p class="pull-right">11:18</p>
+								</div>
+								<!-- MENSAJES RECIBIDO 
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>¿Por qué se lo habrá cortado?</p>
+									<p class="pull-right">11:20</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>Jajajaja</p>
+									<p class="pull-right">11:18</p>
+								</div>
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>Como esta tu clase?</p>
+									<p class="pull-right">14:25</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>La clase va bien!</p>
+									<p class="pull-right">14:32</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>Excelente, me da mucho gusto</p>
+									<p class="pull-right">22:05</p>
+								</div>
+								<!-- MENSAJES ENVIADOS 
+								<div class="msgs-snd pull-right">
+									<p>En qué unidad van</p>
+									<p class="pull-right">22:05</p>
+								</div>
+							<div class="msgs-send pull-right" id="mensaje">
+								
+							</div>
+						</div>
+					<!-- enviar mensajes 
+						<div class="send-text bg-img-solid" id="mensaje">
+							<div class="inline iconos icon-1">
+								<a href="#" class="" id="emoticon" onclick="emoji()"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a>
+							</div>
+							<span class="pt-5">
+								<input type="text" class="form-control inline escribir" id="tarea" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onKeyPress="return sendMessages">
+							<span>
+							<span class="icon-2 inline ">
+								<a onclick="send() " href="#" id="btn-send pull-right"><span class="icon-mic"></span></a>
+							</span>
+						</div>
+					</div>
+					-->
 					<div class="place"></div>
 					<div id="innerpicker">
                     <cat id="cat1">

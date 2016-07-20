@@ -1,4 +1,25 @@
-
+// search
+$('div#filter .contactos').click(function() {
+                $(this).css('outline','none');
+                $('div#filter .current').removeClass('current');
+                $(this).parent().addClass('current');
+        
+                var filterVal = $(this).text().toLowerCase().replace(' ','-');
+                
+                if(filterVal == 'todos') {
+                    $('div#contact .namecontact.hidden').fadeIn('fast').removeClass('hidden');
+                } else {
+                    $('div#contact .namecontact').each(function() {
+                    if(!$(this).hasClass(filterVal)) {
+                        $(this).fadeOut('normal').addClass('hidden');
+                    } else {
+                        $(this).fadeIn('fast').removeClass('hidden');
+                    }
+                });
+                return false;
+                }
+            });
+// search
 
 function valorInput() {
     var inputBox = document.getElementById("tarea");
