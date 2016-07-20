@@ -33,12 +33,12 @@
 							<div class="bg-white">
 								<div class="input-group">
 								 	<span class="input-group-addon"><a href="#"><span class="icon-search"></span></a></span>
-	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchTerm" onkeyup="findMember()">					
+	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchItem" onkeyup="findMember()">					
 								</div>	
 							</div>
 					<!-- scroll contactos -->
 							<div class="scroll" id="datos">
-								<div class="contactos bg-white" data="0">
+								<div class="contactos bg-white chat" data="0">
 									<img src="image/logocodeacademy.png" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Laboratoria Peru</h5>
@@ -46,7 +46,7 @@
 									</div>
 									<p class="pull-right">14:25</p>						
 								</div>
-								<div class="contactos bg-white" data="1">
+								<div class="contactos bg-white chat" data="1">
 									<img src="image/raymi.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Raymi Saldomando</h5>
@@ -54,7 +54,7 @@
 									</div>
 									<p class="pull-right">11:25</p>							
 								</div>
-								<div class="contactos bg-white" data="2">
+								<div class="contactos bg-white chat" data="2">
 									<img src="image/mariana.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Mariana Costa</h5>
@@ -62,7 +62,7 @@
 									</div>
 									<p class="pull-right">09:25</p>							
 								</div>
-								<div class="contactos bg-white" data="3">
+								<div class="contactos bg-white chat" data="3">
 									<img src="image/anamaria.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Ana Maria Martinez Franklin</h5>
@@ -70,7 +70,7 @@
 									</div>
 									<p class="pull-right">Ayer</p>							
 								</div>
-								<div class="contactos bg-white" data="4">
+								<div class="contactos bg-white chat" data="4">
 									<img src="image/rodulfo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Rodulfo Prieto</h5>
@@ -78,7 +78,7 @@
 									</div>
 									<p class="pull-right">Martes</p>							
 								</div>
-								<div class="contactos bg-white" data="5">
+								<div class="contactos bg-white chat" data="5">
 									<img src="image/andrea.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Andrea Lamas</h5>
@@ -86,7 +86,7 @@
 									</div>
 									<p class="pull-right">Lunes</p>							
 								</div>
-								<div class="contactos bg-white" data="6">
+								<div class="contactos bg-white chat" data="6">
 									<img src="image/mariapaula.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Maria Paula Rivarola</h5>
@@ -94,7 +94,7 @@
 									</div>
 									<p class="pull-right">13/01/2016</p>							
 								</div>
-								<div class="contactos bg-white" data="7">
+								<div class="contactos bg-white chat" data="7">
 									<img src="image/katy.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Katy Sanchez</h5>
@@ -102,7 +102,7 @@
 										</div>
 									<p class="pull-right">11/01/2016</p>							
 								</div>
-								<div class="contactos bg-white" data="8">
+								<div class="contactos bg-white chat" data="8">
 									<img src="image/aldo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
 										<h5>Aldo Alfaro</h5>
@@ -176,20 +176,115 @@
 								<p>Nunca!!! Juan Diego es único</p>
 								<p class="pull-right">11:31</p>
 							</div>
+							<div class="msgs-send pull-right" id="mensaje">
+								
+							</div>
 						</div>
 					</div>
 					<!-- enviar mensajes -->
-					<div class="send-text bg-img-solid">
+					<div class="send-text bg-img-solid" id="mensaje">
 						<div class="inline icon-1">
-							<a href="#" class=""><span class="icon-insert_emoticon"></span></a>
+							<a href="#" class="" id="emoticon" onclick="emoji()"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a>
 						</div>
 						<span class="pt-5">
 							<input type="text" id="tarea" class="form-control inline escribir" placeholder="Escribe tu mensaje aquí" onKeyPress="return sendMessages">	
 						<span>
 						<span class="icon-2 inline ">
-							<a onclick="return "href="#" id="btn-send"><span class="icon-mic"></span></a>
+							<a onclick="send() "href="#" id="btn-send"><span class="icon-mic"></span></a>
 						</span>
 					</div>
+					<div class="place"></div>
+					<div id="innerpicker">
+                    <cat id="cat1">
+                      <x onclick='onButtonClick("😀")' href='javascript:void(0)'>😀</x>
+                      <x onclick='onButtonClick("😁")' href='javascript:void(0)'>😁</x>
+                      <x onclick='onButtonClick("😂")' href='javascript:void(0)'>😂</x>
+                      <x onclick='onButtonClick("😃")' href='javascript:void(0)'>😃</x>
+                      <x onclick='onButtonClick("😄")' href='javascript:void(0)'>😄</x>
+                      <x onclick='onButtonClick("😅")' href='javascript:void(0)'>😅</x>
+                      <x onclick='onButtonClick("😆")' href='javascript:void(0)'>😆</x>
+                      <x onclick='onButtonClick("😉")' href='javascript:void(0)'>😉</x>
+                      <x onclick='onButtonClick("😊")' href='javascript:void(0)'>😊</x>
+                      <x onclick='onButtonClick("😋")' href='javascript:void(0)'>😋</x>
+                      <x onclick='onButtonClick("😎")' href='javascript:void(0)'>😎</x>
+                      <x onclick='onButtonClick("😍")' href='javascript:void(0)'>😍</x>
+                      <x onclick='onButtonClick("😘")' href='javascript:void(0)'>😘</x>
+                      <x onclick='onButtonClick("😗")' href='javascript:void(0)'>😗</x>
+                      <x onclick='onButtonClick("😙")' href='javascript:void(0)'>😙</x>
+                      <x onclick='onButtonClick("😚")' href='javascript:void(0)'>😚</x>
+                      <x onclick='onButtonClick("😏")' href='javascript:void(0)'>😏</x>
+                      <x onclick='onButtonClick("😣")' href='javascript:void(0)'>😣</x>
+                      <x onclick='onButtonClick("😥")' href='javascript:void(0)'>😥</x>
+                      <x onclick='onButtonClick("😮")' href='javascript:void(0)'>😮</x>
+                      <x onclick='onButtonClick("😯")' href='javascript:void(0)'>😯</x>
+                      <x onclick='onButtonClick("😪")' href='javascript:void(0)'>😪</x>
+                      <x onclick='onButtonClick("😫")' href='javascript:void(0)'>😫</x>
+                      <x onclick='onButtonClick("😴")' href='javascript:void(0)'>😴</x>
+                      <x onclick='onButtonClick("😌")' href='javascript:void(0)'>😌</x>
+                      <x onclick='onButtonClick("😛")' href='javascript:void(0)'>😛</x>
+                      <x onclick='onButtonClick("😜")' href='javascript:void(0)'>😜</x>
+                      <x onclick='onButtonClick("😝")' href='javascript:void(0)'>😝</x>
+                      <x onclick='onButtonClick("😒")' href='javascript:void(0)'>😒</x>
+                      <x onclick='onButtonClick("😓")' href='javascript:void(0)'>😓</x>
+                      <x onclick='onButtonClick("😔")' href='javascript:void(0)'>😔</x>
+                      <x onclick='onButtonClick("😕")' href='javascript:void(0)'>😕</x>
+                      <x onclick='onButtonClick("🤑")' href='javascript:void(0)'>🤑</x>
+                      <x onclick='onButtonClick("😲")' href='javascript:void(0)'>😲</x>
+                      <x onclick='onButtonClick("😷")' href='javascript:void(0)'>😷</x>
+                      <x onclick='onButtonClick("🙁")' href='javascript:void(0)'>🙁</x>
+                      <x onclick='onButtonClick("😖")' href='javascript:void(0)'>😖</x>
+                      <x onclick='onButtonClick("😞")' href='javascript:void(0)'>😞</x>
+                      <x onclick='onButtonClick("😟")' href='javascript:void(0)'>😟</x>
+                      <x onclick='onButtonClick("😤")' href='javascript:void(0)'>😤</x>
+                      <x onclick='onButtonClick("😢")' href='javascript:void(0)'>😢</x>
+                      <x onclick='onButtonClick("😭")' href='javascript:void(0)'>😭</x>
+                      <x onclick='onButtonClick("😦")' href='javascript:void(0)'>😦</x>
+                      <x onclick='onButtonClick("😧")' href='javascript:void(0)'>😧</x>
+                      <x onclick='onButtonClick("😨")' href='javascript:void(0)'>😨</x>
+                      <x onclick='onButtonClick("😩")' href='javascript:void(0)'>😩</x>
+                      <x onclick='onButtonClick("😬")' href='javascript:void(0)'>😬</x>
+                      <x onclick='onButtonClick("😰")' href='javascript:void(0)'>😰</x>
+                      <x onclick='onButtonClick("😱")' href='javascript:void(0)'>😱</x>
+                      <x onclick='onButtonClick("😳")' href='javascript:void(0)'>😳</x>
+                      <x onclick='onButtonClick("😵")' href='javascript:void(0)'>😵</x>
+                      <x onclick='onButtonClick("😡")' href='javascript:void(0)'>😡</x>
+                      <x onclick='onButtonClick("😠")' href='javascript:void(0)'>😠</x>
+                      <x onclick='onButtonClick("😈")' href='javascript:void(0)'>😈</x>
+                      <x onclick='onButtonClick("👿")' href='javascript:void(0)'>👿</x>
+                      <x onclick='onButtonClick("👹")' href='javascript:void(0)'>👹</x>
+
+                      <x onclick='onButtonClick("🐸")' href='javascript:void(0)'>🐸</x>
+                      <x onclick='onButtonClick("🐊")' href='javascript:void(0)'>🐊</x>
+                      <x onclick='onButtonClick("🐢")' href='javascript:void(0)'>🐢</x>
+                      <x onclick='onButtonClick("🐍")' href='javascript:void(0)'>🐍</x>
+                      <x onclick='onButtonClick("🐲")' href='javascript:void(0)'>🐲</x>
+                      <x onclick='onButtonClick("🐉")' href='javascript:void(0)'>🐉</x>
+                      <x onclick='onButtonClick("🐳")' href='javascript:void(0)'>🐳</x>
+                      <x onclick='onButtonClick("🐋")' href='javascript:void(0)'>🐋</x>
+                      <x onclick='onButtonClick("🐬")' href='javascript:void(0)'>🐬</x>
+                      <x onclick='onButtonClick("🐟")' href='javascript:void(0)'>🐟</x>
+                      <x onclick='onButtonClick("🐠")' href='javascript:void(0)'>🐠</x>
+                      <x onclick='onButtonClick("🐡")' href='javascript:void(0)'>🐡</x>
+                      <x onclick='onButtonClick("🐙")' href='javascript:void(0)'>🐙</x>
+                      <x onclick='onButtonClick("🐚")' href='javascript:void(0)'>🐚</x>
+                      <x onclick='onButtonClick("🦀")' href='javascript:void(0)'>🦀</x>
+                      <x onclick='onButtonClick("🐌")' href='javascript:void(0)'>🐌</x>
+                      <x onclick='onButtonClick("🐛")' href='javascript:void(0)'>🐛</x>
+                      <x onclick='onButtonClick("🐜")' href='javascript:void(0)'>🐜</x>
+                      <x onclick='onButtonClick("🐝")' href='javascript:void(0)'>🐝</x>
+                      <x onclick='onButtonClick("🐞")' href='javascript:void(0)'>🐞</x>
+
+                      <x onclick='onButtonClick("💇")' href='javascript:void(0)'>💇</x>
+                      <x onclick='onButtonClick("💇🏻")' href='javascript:void(0)'>💇🏻</x>
+
+                      <x onclick='onButtonClick("🏃")' href='javascript:void(0)'>🏃</x>
+                      <x onclick='onButtonClick("🏃🏻")' href='javascript:void(0)'>🏃🏻</x>
+                      <x onclick='onButtonClick("🏃🏼")' href='javascript:void(0)'>🏃🏼</x>
+                      <x onclick='onButtonClick("🏃🏽")' href='javascript:void(0)'>🏃🏽</x>
+                      <x onclick='onButtonClick("🏃🏾")' href='javascript:void(0)'>🏃🏾</x>
+
+                    </cat>
+                  </div>
 				</div>
 			</div>
 			</div>
@@ -198,16 +293,6 @@
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>	
-		<script>
-		$(document).ready(function()
-			{
-				$("#btn-send").click(function()
-					{
-						$(".msgs-snd").append('<p>holaaaaaa</p>');
-
-					});	
-						});
 		
-		</script>
 </body>
 </html>
