@@ -4,17 +4,19 @@
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
-  margin-top: -13px; }
+  margin-top: -13px;
+  margin-right: 240px; }
 
 .icon-dots-three-vertical {
-  width: 24px;
-  height: 24px;
+  color: #87868b;
+  float: right; }
+
+.icon-attachment {
   color: #87868b; }
 
 .icon-message {
-  width: 24px;
-  height: 24px;
-  color: #87868b; }
+  color: #87868b;
+  float: right; }
 
 .list-group {
   margin-left: -16px;
@@ -95,6 +97,14 @@
   width: 51%;
   margin: 2% 0; }
 
+.msgs-news {
+  text-align: right;
+  background-color: #DCF7C5;
+  width: 100%;
+  border-radius: 6px;
+  padding: 1% 3% 0 0;
+  margin-bottom: 3%; }
+
 /* MODIFICACIONES NUEVAS */
 .namecontact {
   display: inline-block;
@@ -139,8 +149,7 @@ p {
   font-size: 20px; }
 
 .iconos {
-  width: 24px;
-  height: 24px;
+  font-size: 24px;
   color: #87868b;
   text-decoration: none; }
 
@@ -152,7 +161,7 @@ p {
 
 .scroll1 {
   margin-top: 5px;
-  height: 420px;
+  height: 436px;
   width: 675px;
   overflow: scroll;
   overflow-x: hidden; }

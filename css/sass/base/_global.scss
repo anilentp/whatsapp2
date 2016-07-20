@@ -5,17 +5,21 @@
 	-webkit-border-radius: 50px; 
 	border-radius: 50px; 
 	margin-top: -13px;
+	margin-right: 240px;
 }
-.icon-dots-three-vertical {
-	width: 24px;
-	height: 24px; 
+
+.icon-dots-three-vertical { 
 	color:$gray;
+	float: right;
+}
+.icon-attachment{ 
+	color:$gray;
+	
 }
 
 .icon-message{
-	width: 24px;
-	height: 24px; 
 	color:$gray;
+	float: right;
 }
 
 .list-group{
@@ -40,6 +44,7 @@
 .pagina-completa{
 	margin-top: -8%;
 	margin-bottom: 3%;
+
 }
 .bg-green{
 	background-color: $bg-green;
@@ -58,7 +63,7 @@
 	background: url("../image/chat-panel-bg.png"); 
 	background-size: cover;
 	background-repeat: no-repeat; 
-	//height: 600px;
+	
 }
 .namegroup{
 	background-color: $gray;
@@ -98,6 +103,17 @@
 	padding: 1% 1% 2% 1%;
 	width: 51%;
 	margin: 2% 0;
+}
+
+
+.msgs-news
+{
+	text-align: right;
+    background-color: #DCF7C5;
+    width: 100%;
+    border-radius: 6px;
+    padding: 1% 3% 0 0;
+    margin-bottom: 3%;
 }
 /* MODIFICACIONES NUEVAS */
 .namecontact{
@@ -145,8 +161,7 @@ p{
 //cambios nuevos belen
 
 .iconos{
-	width: 24px;
-	height: 24px;
+	font-size: 24px;
 	color: $gray;
 	text-decoration: none;
 }
@@ -162,7 +177,7 @@ p{
 
 .scroll1{
   margin-top: 5px;
-  height: 420px;
+  height: 436px;
   width: 675px;
   overflow: scroll;
   overflow-x:hidden;
