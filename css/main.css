@@ -34,7 +34,8 @@
 
 /* Inicio estilos Belen */
 .pagina-completa {
-  margin: -8%; }
+  margin-top: -8%;
+  margin-bottom: 3%; }
 
 .bg-green {
   background-color: #009683;
@@ -53,7 +54,7 @@
   background: url("../image/chat-panel-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 675px; }
+  height: 600px; }
 
 .namegroup {
   background-color: #87868b; }
@@ -137,6 +138,11 @@ p {
 .smile {
   font-size: 20px; }
 
+.iconos {
+  font-size: 15px;
+  color: #87868b;
+  text-decoration: none; }
+
 /*cambios Doris */
 .scroll {
   height: 600px;
@@ -145,7 +151,7 @@ p {
 
 .scroll1 {
   margin-top: 5px;
-  height: 630px;
+  height: 600px;
   width: 675px;
   overflow: scroll;
   overflow-x: hidden; }
@@ -165,6 +171,8 @@ p {
   margin-left: 15px; }
 
 .escribir {
-  width: 85%; }
+  width: 85%;
+  margin-top: 2%;
+  margin-bottom: 2%; }
 
 /*# sourceMappingURL=main.css.map */

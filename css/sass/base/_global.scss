@@ -37,7 +37,8 @@
 }
 /* Inicio estilos Belen */
 .pagina-completa{
-	margin: -8%;
+	margin-top: -8%;
+	margin-bottom: 3%;
 }
 .bg-green{
 	background-color: $bg-green;
@@ -56,7 +57,7 @@
 	background: url("../image/chat-panel-bg.png"); 
 	background-size: cover;
 	background-repeat: no-repeat; 
-	height: 675px;
+	height: 600px;
 }
 .namegroup{
 	background-color: $gray;
@@ -140,7 +141,13 @@ p{
 .smile{
 	font-size: 20px;
 }
+//cambios nuevos belen
 
+.iconos{
+	font-size: 15px;
+	color: $gray;
+	text-decoration: none;
+}
 
 
 /*cambios Doris */
@@ -154,7 +161,7 @@ p{
 
 .scroll1{
   margin-top: 5px;
-  height: 630px;
+  height: 600px;
   width: 675px;
   overflow: scroll;
   overflow-x:hidden;
@@ -177,4 +184,6 @@ p{
 
 .escribir{
   width: 85%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
