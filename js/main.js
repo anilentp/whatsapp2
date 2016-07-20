@@ -1,14 +1,4 @@
-//emoticon belen
-$("#emoticon").click(function(){
-        $(this).show("#cat1");
-    });
 
-$('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').focus()
-    });
-
-
-//funcion mensajes chat
 
 function valorInput() {
     var inputBox = document.getElementById("tarea");
