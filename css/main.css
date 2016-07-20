@@ -139,7 +139,8 @@ p {
   font-size: 20px; }
 
 .iconos {
-  font-size: 15px;
+  width: 24px;
+  height: 24px;
   color: #87868b;
   text-decoration: none; }
 
