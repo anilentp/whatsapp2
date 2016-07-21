@@ -1,40 +1,4 @@
 // search
-<<<<<<< HEAD
-/*function search($scope) {
-=======
-function AppCtl($scope) {
->>>>>>> f0132f135e62cd1501b01f7ac9b34ae005a4a2f9
-    $scope.contacts = [
-        {   nombre: 'Laboratoria Peru' ,
-            lastMessage: 'Aldo: Dale dale!'
-        },
-        {   nombre: 'Raymi Saldomando' ,
-            lastMessage: 'La clase va bien!'
-        },
-        {   nombre: 'Mariana Costa' ,
-            lastMessage: 'El panel de speakers esta buenazo'
-        },
-        {   nombre: 'Ana Maria Martinez Franklin' ,
-            lastMessage: 'Pues dale chamo!'
-        },
-        {   nombre: 'Rodulfo Prieto' ,
-            lastMessage: '¿Cómo van las chicas?'
-        },
-        {   nombre: 'Andrea Lamas' ,
-            lastMessage: 'Hoy me toca clases de canto yee!'
-        },
-        {   nombre: 'María Paula Rivarola' ,
-            lastMessage: 'Wuju! esto me encanta!! en verdad!'
-        },
-        {   nombre: 'Katy Sanchez' ,
-            lastMessage: 'No te preocupes, tengo el salón bajo control'
-        },
-        {   nombre: 'Aldo Alfaro' ,
-            lastMessage: 'Van a comer?'
-        }
-    ];
-<<<<<<< HEAD
-}*/
  
  $('ul.listado li a').click(function() {
     var textoFiltro = $(this).text().toLowerCase().replace(/\s/g,"-");
@@ -58,10 +22,8 @@ function AppCtl($scope) {
     }
     return false;
     });
-=======
 }
  
->>>>>>> f0132f135e62cd1501b01f7ac9b34ae005a4a2f9
 // search
 
 function valorInput() {
@@ -113,26 +75,7 @@ function clean() {
 
 //Buscar contacto
 
-$(document).ready(function(){
-    $('input#search').bind('keyup change', function () {
-        if ($(this).val().trim().length !== 0) {
-    
-            $('#datos .contactos').show().hide().each(function () {
-                if ($(this).is(':icontains(' + $('input#search').val() + ')'))
-                    $(this).show();
-            });
-        }
-        else {
-            $('#datos .contactos').show().hide().each(function () {
-                $(this).show();
-            });
-        }
-    });
 
-    $.expr[':'].icontains = function (obj, index, meta, stack) {
-        return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase()) >= 0;
-    };
-});
 
 
 
@@ -152,12 +95,33 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function(){
+    (document).ready(function() {
+$('.chat').click(function(evento) {
+$('.panelmsg').val().hide(2000);
+});
+});
+});
 
 
 
+var foto = ["logocodeacademy.png", "raymi.jpg", 
+"mariana.jpg", "anamaria.jpg", "rodulfo.jpg",
+ "andrea.jpg", "mariapaula.jpg"];
 
+var nombre = ["Laboratoria Perú", "Raymi Saldomando", 
+"Mariana Costa", "Ana María Martinez", "Rodulfo Prieto", 
+"Andrea Lamas", "María Paula Rivarola"];
 
-
+// dar click y cambiar de imagen en el titular
+$(".chat").click(function(){
+    var data = $(this).attr("data");
+    $(".msgs").remove();
+    // var imagen ="image/"+foto[data];
+    $("#hablando").html('<img src="image/' + foto[data] + ' "class="media-object contact">');
+    $("#titulo").html("<h5>" + nombre[data] + "</h5>");
+    
+});
 
 
 
