@@ -1,53 +1,139 @@
-//Funcion de busqueda
-function doSearch()
-        {
-            var tableReg = document.getElementById('datos');
-            var searchText = document.getElementById('searchTerm').value.toLowerCase();
-            var cellsOfRow="";
-            var found=false;
-            var compareWith="";
- 
-            // Recorremos todas las filas con contenido de la tabla
-            for (var i = 1; i < tableReg.rows.length; i++)
-            {
-                cellsOfRow = tableReg.rows[i].getElementsByTagName('b'); //La busqueda en solo nombres
-                found = false;
-                // Recorremos todas las celdas
-                for (var j = 0; j < cellsOfRow.length && !found; j++)
-                {
-                    compareWith = cellsOfRow[j].innerHTML.toLowerCase();
-                    // Buscamos el texto en el contenido de la celda
-                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
-                    {
-                        found = true;
-                    }
-                }
-                if(found)
-                {
-                    tableReg.rows[i].style.display = '';
-                } else {
-                    // si no ha encontrado ninguna coincidencia, esconde la
-                    // fila de la tabla
-                    tableReg.rows[i].style.display = 'none';
-                }
-            }
+// search
+function AppCtl($scope) {
+    $scope.contacts = [
+        {   nombre: 'Laboratoria Peru' ,
+            lastMessage: 'Aldo: Dale dale!'
+        },
+        {   nombre: 'Raymi Saldomando' ,
+            lastMessage: 'La clase va bien!'
+        },
+        {   nombre: 'Mariana Costa' ,
+            lastMessage: 'El panel de speakers esta buenazo'
+        },
+        {   nombre: 'Ana Maria Martinez Franklin' ,
+            lastMessage: 'Pues dale chamo!'
+        },
+        {   nombre: 'Rodulfo Prieto' ,
+            lastMessage: '¿Cómo van las chicas?'
+        },
+        {   nombre: 'Andrea Lamas' ,
+            lastMessage: 'Hoy me toca clases de canto yee!'
+        },
+        {   nombre: 'María Paula Rivarola' ,
+            lastMessage: 'Wuju! esto me encanta!! en verdad!'
+        },
+        {   nombre: 'Katy Sanchez' ,
+            lastMessage: 'No te preocupes, tengo el salón bajo control'
+        },
+        {   nombre: 'Aldo Alfaro' ,
+            lastMessage: 'Van a comer?'
         }
+    ];
+}
+ 
+// search
 
+function valorInput() {
+    var inputBox = document.getElementById("tarea");
+    return inputBox.value;//captura el valor del input
+}
 
-var foto = ["logocodeacademy.png", "raymi.jpg", 
-"mariana.jpg", "anamaria.jpg", "rodulfo.jpg",
- "andrea.jpg", "mariapaula.jpg"];
-
-var nombre = ["Laboratoria Perú", "Raymi Saldomando", 
-"Mariana Costa", "Ana María Martinez", "Rodulfo Prieto", 
-"Andrea Lamas", "María Paula Rivarola"];
-
-// dar click y cambiar de imagen en el titular
-$(".contacto-ppal").click(function(){     //chat clase
-    var data = $(this).attr("data");
-    $(".msgs-snd").remove();
-    // var imagen ="image/"+foto[data];
-    $("#contact").html('<img src="image/' + foto[data] + ' "class="logo-codecademy">');
-    $("#titulo").html("<b>" + nombre[data] + "</b>");
-    escribirChat();
+function send() { //ENVIA MENSAJE
+    var inputBoxValue = valorInput();
+    if (inputBoxValue !== "") {
+        boxConversa(inputBoxValue);
+        clean();
+    }
+}
+$(document).keypress(function(event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13') {
+          send();
+    }//AL HACER ENTER ENVIA MENSAJE
 });
+
+function boxConversa(bubbleText) { //CONSTRUCCION BURBUJA CONVERSACION
+
+    var hora = new Date();
+    var minuto = hora.getMinutes();
+    var tiempo = hora.getHours();
+    if(minuto<10){
+        minuto = "0" + minuto
+    }
+    if(tiempo<10){
+        tiempo = "0" + tiempo
+    }
+    if(tiempo<12){
+        minuto += " A.M."
+    }
+
+    var conversa = document.getElementById("mensaje");
+    var contenido = document.createElement("div");
+    contenido.className = "msgs-news";//agregar a sass!
+    contenido.innerHTML =  "<div>" + "<h5>" + bubbleText + "</h5>" + "<p>" + tiempo + ":" + minuto + "</p>" + "</div>";
+    conversa.appendChild(contenido);
+}
+function clean() {
+    var inputBox = document.getElementById("tarea");
+    inputBox.value = "";
+    inputBox.focus(); //LIMPIAR INPUT
+}
+
+
+//Buscar contacto
+
+$(document).ready(function(){
+    $('input#search').bind('keyup change', function () {
+        if ($(this).val().trim().length !== 0) {
+    
+            $('#datos .contactos').show().hide().each(function () {
+                if ($(this).is(':icontains(' + $('input#search').val() + ')'))
+                    $(this).show();
+            });
+        }
+        else {
+            $('#datos .contactos').show().hide().each(function () {
+                $(this).show();
+            });
+        }
+    });
+
+    $.expr[':'].icontains = function (obj, index, meta, stack) {
+        return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase()) >= 0;
+    };
+});
+
+
+
+
+//Mostrar y ocultar emojis
+$(document).ready(function(){
+        
+        $("#emoticon").on( "click", function() {
+            $('#innerpicker').show(); 
+         });
+        
+        $("#emoticon").on( "dblclick", function() {
+            $('#innerpicker').hide(); 
+         });
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

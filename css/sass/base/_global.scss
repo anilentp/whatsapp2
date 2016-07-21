@@ -5,39 +5,30 @@
 	-webkit-border-radius: 50px; 
 	border-radius: 50px; 
 	margin-top: -13px;
+	margin-right: 240px;
 }
-.icon-dots-three-vertical {
+.icon-dots-three-vertical, .icon-message { 
 	color:$gray;
-	margin-top: 12px;
-	margin-left: 28px;
+	float: right;
 }
-
-.icon-message{
+.icon-attachment{ 
 	color:$gray;
-	margin-left: 260px;
+	margin-right: 20px;	
 }
-
 .list-group{
 	margin-left: -16px;
 	margin-top:3px; 
-}
-
-.logo-codecademy{
-	width: 45px;
-	height: 45px;
-	-moz-border-radius: 50px; 
-	-webkit-border-radius: 50px; 
-	border-radius: 50px; 
-	margin-top: -32x;
 }
 .h5{
 	margin-left: 12px;
 	margin-top: -11px;
 	padding: 2px;
 }
+
 /* Inicio estilos Belen */
 .pagina-completa{
-	margin: -8%;
+	margin-top: -8%;
+	margin-bottom: 3%;
 }
 .bg-green{
 	background-color: $bg-green;
@@ -55,8 +46,7 @@
 .bg-img{
 	background: url("../image/chat-panel-bg.png"); 
 	background-size: cover;
-	background-repeat: no-repeat; 
-	height: 675px;
+	background-repeat: no-repeat; 	
 }
 .namegroup{
 	background-color: $gray;
@@ -97,6 +87,15 @@
 	width: 51%;
 	margin: 2% 0;
 }
+.msgs-news{
+	text-align: right;
+    background-color: #DCF7C5;
+    width: 100%;
+    border-radius: 6px;
+    padding: 1% 3% 0 0;
+    margin-bottom: 3%;
+}
+
 /* MODIFICACIONES NUEVAS */
 .namecontact{
     display: inline-block;
@@ -137,29 +136,36 @@ p{
  .mensaje{
  	width: 100%;
  }
-.smile{
-	font-size: 20px;
+//cambios nuevos belen
+.media{
+	height: 76px;
+}
+.logo-codecademy{
+	width: 45px;
+	height: 45px;
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px; 
+	margin-top: -32x;
+}
+.iconos{
+	font-size: 24px;
+	color: $gray;
 }
 
-
-
 /*cambios Doris */
-
-
 .scroll{
-  height: 600px;
+  height: 443px;
   overflow: scroll;
   overflow-x:hidden;
 }
-
 .scroll1{
   margin-top: 5px;
-  height: 630px;
+  height: 436px;
   width: 675px;
   overflow: scroll;
   overflow-x:hidden;
 }
-
 .inline{
   display: inline-block;
 }
@@ -167,6 +173,7 @@ p{
   float: right;
   margin-top: 18px;
   margin-right: 15px;
+  font-size: 20px;
 }
 .icon-1{
   float: left;
@@ -174,7 +181,17 @@ p{
   margin-right: 15px;
   margin-left: 15px;
 }
-
 .escribir{
   width: 85%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.iconos:hover{
+	color: #505050;
+}
+.iconos a, .icon-2 a {
+	text-decoration: none;
+}
+.input-group a{
+	text-decoration: none;
 }
