@@ -47,16 +47,19 @@
   padding-top: 10%; }
 
 .bg-gray {
-  background-color: #E2E0DD; }
+  background-color: #E2E0DD;
+  max-height: 500px; }
 
 .bg-img-solid {
   background-color: #efe9e2;
-  margin-left: -15px; }
+  margin-left: -15px;
+  max-height: 436px; }
 
 .bg-img {
   background: url("../image/chat-panel-bg.png");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  max-height: 436px; }
 
 .namegroup {
   background-color: #87868b; }
@@ -158,13 +161,13 @@ p {
 
 /*cambios Doris */
 .scroll {
-  height: 420px;
+  max-height: 420px;
   overflow: scroll;
   overflow-x: hidden; }
 
 .scroll1 {
   margin-top: 5px;
-  height: 436px;
+  max-height: 436px;
   width: 675px;
   overflow: scroll;
   overflow-x: hidden; }

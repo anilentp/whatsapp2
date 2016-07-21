@@ -1,24 +1,58 @@
 // search
-$('div#filter .contactos').click(function() {
-                $(this).css('outline','none');
-                $('div#filter .current').removeClass('current');
-                $(this).parent().addClass('current');
-        
-                var filterVal = $(this).text().toLowerCase().replace(' ','-');
-                
-                if(filterVal == 'todos') {
-                    $('div#contact .namecontact.hidden').fadeIn('fast').removeClass('hidden');
-                } else {
-                    $('div#contact .namecontact').each(function() {
-                    if(!$(this).hasClass(filterVal)) {
-                        $(this).fadeOut('normal').addClass('hidden');
-                    } else {
-                        $(this).fadeIn('fast').removeClass('hidden');
-                    }
-                });
-                return false;
-                }
-            });
+/*function search($scope) {
+    $scope.contacts = [
+        {   nombre: 'Laboratoria Peru' ,
+            lastMessage: 'Aldo: Dale dale!'
+        },
+        {   nombre: 'Raymi Saldomando' ,
+            lastMessage: 'La clase va bien!'
+        },
+        {   nombre: 'Mariana Costa' ,
+            lastMessage: 'El panel de speakers esta buenazo'
+        },
+        {   nombre: 'Ana Maria Martinez Franklin' ,
+            lastMessage: 'Pues dale chamo!'
+        },
+        {   nombre: 'Rodulfo Prieto' ,
+            lastMessage: '¿Cómo van las chicas?'
+        },
+        {   nombre: 'Andrea Lamas' ,
+            lastMessage: 'Hoy me toca clases de canto yee!'
+        },
+        {   nombre: 'María Paula Rivarola' ,
+            lastMessage: 'Wuju! esto me encanta!! en verdad!'
+        },
+        {   nombre: 'Katy Sanchez' ,
+            lastMessage: 'No te preocupes, tengo el salón bajo control'
+        },
+        {   nombre: 'Aldo Alfaro' ,
+            lastMessage: 'Van a comer?'
+        }
+    ];
+}*/
+ 
+ $('ul.listado li a').click(function() {
+    var textoFiltro = $(this).text().toLowerCase().replace(/\s/g,"-");
+    if(textoFiltro == 'todos')
+    {
+        $('div.filtros div.hidden').fadeIn('slow').removeClass('hidden');
+    }
+    else
+    {
+        $('.filtros div').each(function()
+        {
+            if(!$(this).hasClass(filterVal))
+            {
+                $(this).fadeOut('normal').addClass('hidden');
+            }
+            else
+            {
+                $(this).fadeIn('slow').removeClass('hidden');
+            }
+        });
+    }
+    return false;
+    });
 // search
 
 function valorInput() {

@@ -54,15 +54,18 @@
 }
 .bg-gray{
 	background-color: $bg-gray;
+	max-height: 500px;
 }
 .bg-img-solid{
 	background-color: rgba(239, 233, 226, 1);
 	margin-left: -15px;
+	max-height: 436px;
 }
 .bg-img{
 	background: url("../image/chat-panel-bg.png"); 
 	background-size: cover;
 	background-repeat: no-repeat; 
+	 max-height: 436px;
 	
 }
 .namegroup{
@@ -104,10 +107,7 @@
 	width: 51%;
 	margin: 2% 0;
 }
-
-
-.msgs-news
-{
+.msgs-news {
 	text-align: right;
     background-color: #DCF7C5;
     width: 100%;
@@ -172,14 +172,14 @@ p{
 
 
 .scroll{
-  height: 420px;
+  max-height: 420px;
   overflow: scroll;
   overflow-x:hidden;
 }
 
 .scroll1{
   margin-top: 5px;
-  height: 436px;
+  max-height: 436px;
   width: 675px;
   overflow: scroll;
   overflow-x:hidden;
