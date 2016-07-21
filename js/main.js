@@ -49,26 +49,7 @@ function clean() {
 
 //Buscar contacto
 
-$(document).ready(function(){
-    $('input#search').bind('keyup change', function () {
-        if ($(this).val().trim().length !== 0) {
-    
-            $('#datos .contactos').show().hide().each(function () {
-                if ($(this).is(':icontains(' + $('input#search').val() + ')'))
-                    $(this).show();
-            });
-        }
-        else {
-            $('#datos .contactos').show().hide().each(function () {
-                $(this).show();
-            });
-        }
-    });
 
-    $.expr[':'].icontains = function (obj, index, meta, stack) {
-        return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase()) >= 0;
-    };
-});
 
 
 
@@ -88,12 +69,33 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function(){
+    (document).ready(function() {
+$('.chat').click(function(evento) {
+$('.panelmsg').val().hide(2000);
+});
+});
+});
 
 
 
+var foto = ["logocodeacademy.png", "raymi.jpg", 
+"mariana.jpg", "anamaria.jpg", "rodulfo.jpg",
+ "andrea.jpg", "mariapaula.jpg"];
 
+var nombre = ["Laboratoria Perú", "Raymi Saldomando", 
+"Mariana Costa", "Ana María Martinez", "Rodulfo Prieto", 
+"Andrea Lamas", "María Paula Rivarola"];
 
-
+// dar click y cambiar de imagen en el titular
+$(".chat").click(function(){
+    var data = $(this).attr("data");
+    $(".msgs").remove();
+    // var imagen ="image/"+foto[data];
+    $("#hablando").html('<img src="image/' + foto[data] + ' "class="media-object contact">');
+    $("#titulo").html("<h5>" + nombre[data] + "</h5>");
+    
+});
 
 
 
