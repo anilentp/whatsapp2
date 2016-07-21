@@ -7,28 +7,17 @@
   margin-top: -13px;
   margin-right: 240px; }
 
-.icon-dots-three-vertical {
+.icon-dots-three-vertical, .icon-message {
   color: #87868b;
   float: right; }
 
 .icon-attachment {
-  color: #87868b; }
-
-.icon-message {
   color: #87868b;
-  float: right; }
+  margin-right: 20px; }
 
 .list-group {
   margin-left: -16px;
   margin-top: 3px; }
-
-.logo-codecademy {
-  width: 45px;
-  height: 45px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  margin-top: -32x; }
 
 .h5 {
   margin-left: 12px;
@@ -148,20 +137,24 @@ p {
 .mensaje {
   width: 100%; }
 
-.smile {
-  font-size: 20px; }
-
 .media {
   height: 76px; }
 
+.logo-codecademy {
+  width: 45px;
+  height: 45px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: -32x; }
+
 .iconos {
   font-size: 24px;
-  color: #87868b;
-  text-decoration: none; }
+  color: #87868b; }
 
 /*cambios Doris */
 .scroll {
-  max-height: 420px;
+  height: 443px;
   overflow: scroll;
   overflow-x: hidden; }
 
@@ -178,7 +171,8 @@ p {
 .icon-2 {
   float: right;
   margin-top: 18px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  font-size: 20px; }
 
 .icon-1 {
   float: left;
@@ -190,5 +184,14 @@ p {
   width: 85%;
   margin-top: 2%;
   margin-bottom: 2%; }
+
+.iconos:hover {
+  color: #505050; }
+
+.iconos a, .icon-2 a {
+  text-decoration: none; }
+
+.input-group a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */

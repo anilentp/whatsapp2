@@ -1,5 +1,9 @@
 // search
+<<<<<<< HEAD
 /*function search($scope) {
+=======
+function AppCtl($scope) {
+>>>>>>> f0132f135e62cd1501b01f7ac9b34ae005a4a2f9
     $scope.contacts = [
         {   nombre: 'Laboratoria Peru' ,
             lastMessage: 'Aldo: Dale dale!'
@@ -29,6 +33,7 @@
             lastMessage: 'Van a comer?'
         }
     ];
+<<<<<<< HEAD
 }*/
  
  $('ul.listado li a').click(function() {
@@ -53,6 +58,10 @@
     }
     return false;
     });
+=======
+}
+ 
+>>>>>>> f0132f135e62cd1501b01f7ac9b34ae005a4a2f9
 // search
 
 function valorInput() {
