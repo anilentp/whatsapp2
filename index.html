@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app ng-controller="search">
 	<head>
 	  	<meta charset="utf-8">
 	  	<title>Whatsapp Web</title>
@@ -22,22 +22,24 @@
 						<nav class="navbar navbar-default">
 			    			<div class="navbar-header">
 			      				<a class="navbar-brand" href="#">
-			        			<img class="gian" src="image/gian.jpg">
+			        				<img class="gian" src="image/gian.jpg">
 			      				</a>
-			      				<span class="icon-dots-three-vertical"></span>
-			      				<span class="icon-message"></span>
+			      				<span class="navbar-brand iconos pull-right icon-dots-three-vertical"></span>
+			      				<span class="navbar-brand iconos pull-right icon-message"></span>
 			    			</div>
 						</nav>
 						<div class="contact-msg">
-					<!-- buscador de chat -->
+						<!-- buscador de chat -->
 							<div class="bg-white">
 								<div class="input-group">
 								 	<span class="input-group-addon"><a href="#"><span class="icon-search"></span></a></span>
-	  								<input type="text" class="form-control" placeholder="Buscar o empezar un chat nuevo" id="searchItem" onkeyup="findMember()">					
-								</div>	
+	  								<input type="text" class="form-control" id="filter" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onkeyup="findMember()">
+	  								<!--<input type="text" class="form-control" id="searchItem" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';" onkeyup="findMember()"> -->
+								</div>
 							</div>
-					<!-- scroll contactos -->
+						<!-- scroll contactos -->
 							<div class="scroll" id="datos">
+							<!-- LABORATORIA PERU -->
 								<div class="contactos bg-white chat" data="0">
 									<img src="image/logocodeacademy.png" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -46,6 +48,7 @@
 									</div>
 									<p class="pull-right">14:25</p>						
 								</div>
+							<!-- RAYMI -->
 								<div class="contactos bg-white chat" data="1">
 									<img src="image/raymi.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -54,6 +57,7 @@
 									</div>
 									<p class="pull-right">11:25</p>							
 								</div>
+							<!-- MARIANA COSTA-->
 								<div class="contactos bg-white chat" data="2">
 									<img src="image/mariana.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -62,6 +66,7 @@
 									</div>
 									<p class="pull-right">09:25</p>							
 								</div>
+							<!-- ANA MARIA -->
 								<div class="contactos bg-white chat" data="3">
 									<img src="image/anamaria.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -70,6 +75,7 @@
 									</div>
 									<p class="pull-right">Ayer</p>							
 								</div>
+							<!-- RODULFO -->
 								<div class="contactos bg-white chat" data="4">
 									<img src="image/rodulfo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -78,6 +84,7 @@
 									</div>
 									<p class="pull-right">Martes</p>							
 								</div>
+							<!-- ANDREA -->
 								<div class="contactos bg-white chat" data="5">
 									<img src="image/andrea.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -86,6 +93,7 @@
 									</div>
 									<p class="pull-right">Lunes</p>							
 								</div>
+							<!-- MARIA PAULA -->
 								<div class="contactos bg-white chat" data="6">
 									<img src="image/mariapaula.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -94,6 +102,7 @@
 									</div>
 									<p class="pull-right">13/01/2016</p>							
 								</div>
+							<!-- KATY SANCHEZ -->
 								<div class="contactos bg-white chat" data="7">
 									<img src="image/katy.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -102,6 +111,7 @@
 										</div>
 									<p class="pull-right">11/01/2016</p>							
 								</div>
+							<!-- ALDO ALFARO -->
 								<div class="contactos bg-white chat" data="8">
 									<img src="image/aldo.jpg" class="pull-left logo-codecademy">
 									<div class="namecontact">
@@ -113,188 +123,122 @@
 							</div>
 						</div>
 					</div>
-				<div class="col-md-7 bg-img-solid">
-			    	<div class="panelcontc">
-			    		<div class="contacto-ppal" id="hablando">
-							<div class="media">
-				        	    <div class="media-left">
-								    <a href="#">
-								      	<img class="media-object contact" src="image/logocodeacademy.png">
-								    </a>
-								    
+					<div class="col-md-7 bg-img-solid">
+					<!-- CONTACTO ACTIVO LABORATORIA PERU -->
+				    	<div class="panelcontc">
+				    		<div class="contacto-ppal">
+								<div class="media">
+					        	    <div class="media-left">
+									    <a class="media-object" href="#">
+									    	<img src="image/logocodeacademy.png" class="media-object contact logo-codecademy">
+									    </a>
+									</div>
+									<div class="media-body">
+									    <h4 class="media-heading">Laboratoria Perú</h4>
+									    <p class="media-heading inline">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
+									    <span class="media-heading inline iconos pull-right icon-dots-three-vertical"></span>
+										<span class="media-heading inline iconos pull-right icon-attachment"></span>
+									</div>
 								</div>
-								
-								<div class="media-body" id="titulo">
-								    <h4 class="media-heading" >Laboratoria Perú</h4>
-								    <p class="media-heading">Ana María, Aldo, Gian, Mariana, Papu, Tú</p>
+				    		</div>
+						</div>
+					<!-- PANEL DE MENSAJES LABORATORIA PERU -->
+						<div class="bg-img">
+							<div class="panelmsg scroll1 visible" id="msg-group-0">
+								<!-- MENSAJES RECIBIDO -->
+								<div class="msgs-rcb pull-left msgs">
+									<h6 class="celeste">Andrea Lamas</h6>
+									<p>Chicos han visto el nuevo corte de Aldo?</p>
+									<p class="pull-right">11:12</p>
 								</div>
-								<span class="icon-dots-three-vertical "></span>
-								<span class="icon-attachment "></span>
-							</div>
-			    		</div>
-					</div>
-					<div class="bg-img">
-						<div class="panelmsg scroll1">
-							<div class="msgs-rcb pull-left msgs">
-								<h6 class="celeste">Andrea Lamas</h6>
-								<p>Chicos han visto el nuevo corte de Aldo?</p>
-								<p class="pull-right">11:12</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h6 class="rosado">Mariana Costa</h6>
-								<p>¿Finalmente se corto?</p>
-								<p class="pull-right">11:13</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h6 class="verde">María Paula Rivarola</h6>
-								<p>Jajaja Sii finalmente de corto!!</p>
-								<p class="pull-right">11:13</p>
-							</div>
-							<div class="msgs-snd pull-right msgs">
-								<p>Antes parecia mufasa jajajaja</p>
-								<p class="pull-right">11:14</p>
-							</div>
-							<div class="msgs-snd pull-right msgs">
-								<p>Ahora si esta decente</p>
-								<p class="pull-right">11:18</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h6 class="celeste">Andrea Lamas</h6>
-								<p>¿Por qué se lo habrá cortado?</p>
-								<p class="pull-right">11:20</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h5 class="dorado">Aldo Alfaro</h5>
-								<p>Ya ya ya, hacia mucho calor que más</p>
-								<p class="pull-right">11:25</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h5 class="celeste">Andrea Lamas</h5>
-								<p>Esta siguiendo los pasos de Juan Diego!</p>
-								<p class="pull-right">11:30</p>
-							</div>
-							<div class="msgs-rcb pull-left msgs">
-								<h5 class="verde">María Paula Rivarola</h5>
-								<p>Nunca!!! Juan Diego es único</p>
-								<p class="pull-right">11:31</p>
-							</div>
-							<div class="msgs-send pull-right" id="mensaje">
+								<!-- MENSAJES RECIBIDO -->
+								<div class="msgs-rcb pull-left msgs">
+									<h6 class="rosado">Mariana Costa</h6>
+									<p>¿Finalmente se corto?</p>
+									<p class="pull-right">11:13</p>
+								</div>
+								<!-- MENSAJES RECIBIDO -->
+								<div class="msgs-rcb pull-left msgs">
+									<h6 class="verde">María Paula Rivarola</h6>
+									<p>Jajaja Sii finalmente de corto!!</p>
+									<p class="pull-right">11:13</p>
+								</div>
+							<div class="msgs-send pull-right msgs" id="mensaje">
 								
 							</div>
 						</div>
-					</div>
+					<!-- PANEL DE MENSAJES REYMY -->
+						<div class="bg-img">
+							<div class="panelmsg scroll1" id="msg-group-1">
+								<!-- MENSAJES RECIBIDO -->
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>Ya viste el nuevo corte de Aldo?</p>
+									<p class="pull-right">11:12</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>Antes parecia mufasa jajajaja</p>
+									<p class="pull-right">11:14</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>Ahora si esta decente</p>
+									<p class="pull-right">11:18</p>
+								</div>
+								<!-- MENSAJES RECIBIDO -->
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>¿Por qué se lo habrá cortado?</p>
+									<p class="pull-right">11:20</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>Jajajaja</p>
+									<p class="pull-right">11:18</p>
+								</div>
+								<div class="msgs-rcb pull-left">
+									<h6 class="celeste">Raymi Saldomando</h6>
+									<p>Como esta tu clase?</p>
+									<p class="pull-right">14:25</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>La clase va bien!</p>
+									<p class="pull-right">14:32</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>Excelente, me da mucho gusto</p>
+									<p class="pull-right">22:05</p>
+								</div>
+								<!-- MENSAJES ENVIADOS -->
+								<div class="msgs-snd pull-right">
+									<p>En qué unidad van</p>
+									<p class="pull-right">22:05</p>
+								</div>
+							<div class="msgs-send pull-right msgs" id="mensaje">
+								
+							</div>
+						</div>
 					<!-- enviar mensajes -->
-					<div class="send-text bg-img-solid" id="mensaje">
-						<div class="inline icon-1">
-							<a href="#" class="" ><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a>
+						<div class="send-text bg-img-solid" id="mensaje">
+							<div class="inline iconos icon-1">
+								<a href="#" class="" id="emoticon" onclick="emoji()"><span class="icon-insert_emoticon" id="emoticon" onclick="emoji()"></span></a> 
+							</div>
+							<span class="pt-5">
+								<input type="text" class="form-control inline escribir" id="tarea" value="Escribe tu mensaje aquí" onfocus="if (this.value=='Escribe tu mensaje aquí') this.value='';" onblur="if (this.value=='') this.value='Escribe tu mensaje aquí';">
+							</span>
+							<span class="icon-2 inline ">
+								<a onclick="send() " href="#" id="btn-send pull-right"><span class="icon-mic"></span></a>
+							</span>
 						</div>
-						<span class="pt-5">
-							<input type="text" id="tarea" class="form-control inline escribir" placeholder="Escribe tu mensaje aquí" onKeyPress="return sendMessages">	
-						<span>
-						<span class="icon-2 inline ">
-							<a onclick="send() "href="#" id="btn-send"><span class="icon-mic"></span></a>
-						</span>
 					</div>
-					<div class="place"></div>
-					<div id="innerpicker">
-                    <cat id="cat1">
-                      <x onclick='onButtonClick("😀")' href='javascript:void(0)'>😀</x>
-                      <x onclick='onButtonClick("😁")' href='javascript:void(0)'>😁</x>
-                      <x onclick='onButtonClick("😂")' href='javascript:void(0)'>😂</x>
-                      <x onclick='onButtonClick("😃")' href='javascript:void(0)'>😃</x>
-                      <x onclick='onButtonClick("😄")' href='javascript:void(0)'>😄</x>
-                      <x onclick='onButtonClick("😅")' href='javascript:void(0)'>😅</x>
-                      <x onclick='onButtonClick("😆")' href='javascript:void(0)'>😆</x>
-                      <x onclick='onButtonClick("😉")' href='javascript:void(0)'>😉</x>
-                      <x onclick='onButtonClick("😊")' href='javascript:void(0)'>😊</x>
-                      <x onclick='onButtonClick("😋")' href='javascript:void(0)'>😋</x>
-                      <x onclick='onButtonClick("😎")' href='javascript:void(0)'>😎</x>
-                      <x onclick='onButtonClick("😍")' href='javascript:void(0)'>😍</x>
-                      <x onclick='onButtonClick("😘")' href='javascript:void(0)'>😘</x>
-                      <x onclick='onButtonClick("😗")' href='javascript:void(0)'>😗</x>
-                      <x onclick='onButtonClick("😙")' href='javascript:void(0)'>😙</x>
-                      <x onclick='onButtonClick("😚")' href='javascript:void(0)'>😚</x>
-                      <x onclick='onButtonClick("😏")' href='javascript:void(0)'>😏</x>
-                      <x onclick='onButtonClick("😣")' href='javascript:void(0)'>😣</x>
-                      <x onclick='onButtonClick("😥")' href='javascript:void(0)'>😥</x>
-                      <x onclick='onButtonClick("😮")' href='javascript:void(0)'>😮</x>
-                      <x onclick='onButtonClick("😯")' href='javascript:void(0)'>😯</x>
-                      <x onclick='onButtonClick("😪")' href='javascript:void(0)'>😪</x>
-                      <x onclick='onButtonClick("😫")' href='javascript:void(0)'>😫</x>
-                      <x onclick='onButtonClick("😴")' href='javascript:void(0)'>😴</x>
-                      <x onclick='onButtonClick("😌")' href='javascript:void(0)'>😌</x>
-                      <x onclick='onButtonClick("😛")' href='javascript:void(0)'>😛</x>
-                      <x onclick='onButtonClick("😜")' href='javascript:void(0)'>😜</x>
-                      <x onclick='onButtonClick("😝")' href='javascript:void(0)'>😝</x>
-                      <x onclick='onButtonClick("😒")' href='javascript:void(0)'>😒</x>
-                      <x onclick='onButtonClick("😓")' href='javascript:void(0)'>😓</x>
-                      <x onclick='onButtonClick("😔")' href='javascript:void(0)'>😔</x>
-                      <x onclick='onButtonClick("😕")' href='javascript:void(0)'>😕</x>
-                      <x onclick='onButtonClick("🤑")' href='javascript:void(0)'>🤑</x>
-                      <x onclick='onButtonClick("😲")' href='javascript:void(0)'>😲</x>
-                      <x onclick='onButtonClick("😷")' href='javascript:void(0)'>😷</x>
-                      <x onclick='onButtonClick("🙁")' href='javascript:void(0)'>🙁</x>
-                      <x onclick='onButtonClick("😖")' href='javascript:void(0)'>😖</x>
-                      <x onclick='onButtonClick("😞")' href='javascript:void(0)'>😞</x>
-                      <x onclick='onButtonClick("😟")' href='javascript:void(0)'>😟</x>
-                      <x onclick='onButtonClick("😤")' href='javascript:void(0)'>😤</x>
-                      <x onclick='onButtonClick("😢")' href='javascript:void(0)'>😢</x>
-                      <x onclick='onButtonClick("😭")' href='javascript:void(0)'>😭</x>
-                      <x onclick='onButtonClick("😦")' href='javascript:void(0)'>😦</x>
-                      <x onclick='onButtonClick("😧")' href='javascript:void(0)'>😧</x>
-                      <x onclick='onButtonClick("😨")' href='javascript:void(0)'>😨</x>
-                      <x onclick='onButtonClick("😩")' href='javascript:void(0)'>😩</x>
-                      <x onclick='onButtonClick("😬")' href='javascript:void(0)'>😬</x>
-                      <x onclick='onButtonClick("😰")' href='javascript:void(0)'>😰</x>
-                      <x onclick='onButtonClick("😱")' href='javascript:void(0)'>😱</x>
-                      <x onclick='onButtonClick("😳")' href='javascript:void(0)'>😳</x>
-                      <x onclick='onButtonClick("😵")' href='javascript:void(0)'>😵</x>
-                      <x onclick='onButtonClick("😡")' href='javascript:void(0)'>😡</x>
-                      <x onclick='onButtonClick("😠")' href='javascript:void(0)'>😠</x>
-                      <x onclick='onButtonClick("😈")' href='javascript:void(0)'>😈</x>
-                      <x onclick='onButtonClick("👿")' href='javascript:void(0)'>👿</x>
-                      <x onclick='onButtonClick("👹")' href='javascript:void(0)'>👹</x>
-
-                      <x onclick='onButtonClick("🐸")' href='javascript:void(0)'>🐸</x>
-                      <x onclick='onButtonClick("🐊")' href='javascript:void(0)'>🐊</x>
-                      <x onclick='onButtonClick("🐢")' href='javascript:void(0)'>🐢</x>
-                      <x onclick='onButtonClick("🐍")' href='javascript:void(0)'>🐍</x>
-                      <x onclick='onButtonClick("🐲")' href='javascript:void(0)'>🐲</x>
-                      <x onclick='onButtonClick("🐉")' href='javascript:void(0)'>🐉</x>
-                      <x onclick='onButtonClick("🐳")' href='javascript:void(0)'>🐳</x>
-                      <x onclick='onButtonClick("🐋")' href='javascript:void(0)'>🐋</x>
-                      <x onclick='onButtonClick("🐬")' href='javascript:void(0)'>🐬</x>
-                      <x onclick='onButtonClick("🐟")' href='javascript:void(0)'>🐟</x>
-                      <x onclick='onButtonClick("🐠")' href='javascript:void(0)'>🐠</x>
-                      <x onclick='onButtonClick("🐡")' href='javascript:void(0)'>🐡</x>
-                      <x onclick='onButtonClick("🐙")' href='javascript:void(0)'>🐙</x>
-                      <x onclick='onButtonClick("🐚")' href='javascript:void(0)'>🐚</x>
-                      <x onclick='onButtonClick("🦀")' href='javascript:void(0)'>🦀</x>
-                      <x onclick='onButtonClick("🐌")' href='javascript:void(0)'>🐌</x>
-                      <x onclick='onButtonClick("🐛")' href='javascript:void(0)'>🐛</x>
-                      <x onclick='onButtonClick("🐜")' href='javascript:void(0)'>🐜</x>
-                      <x onclick='onButtonClick("🐝")' href='javascript:void(0)'>🐝</x>
-                      <x onclick='onButtonClick("🐞")' href='javascript:void(0)'>🐞</x>
-
-                      <x onclick='onButtonClick("💇")' href='javascript:void(0)'>💇</x>
-                      <x onclick='onButtonClick("💇🏻")' href='javascript:void(0)'>💇🏻</x>
-
-                      <x onclick='onButtonClick("🏃")' href='javascript:void(0)'>🏃</x>
-                      <x onclick='onButtonClick("🏃🏻")' href='javascript:void(0)'>🏃🏻</x>
-                      <x onclick='onButtonClick("🏃🏼")' href='javascript:void(0)'>🏃🏼</x>
-                      <x onclick='onButtonClick("🏃🏽")' href='javascript:void(0)'>🏃🏽</x>
-                      <x onclick='onButtonClick("🏃🏾")' href='javascript:void(0)'>🏃🏾</x>
-
-                    </cat>
-                  </div>
 				</div>
 			</div>
-			</div>
-		</div>
-	</section>
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		</section>
+		<script type="text/javascript"  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>	
-		
 </body>
 </html>

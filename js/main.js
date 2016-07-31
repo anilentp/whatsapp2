@@ -1,4 +1,3 @@
-//funcion mensajes chat
 
 function valorInput() {
     var inputBox = document.getElementById("tarea");
@@ -69,14 +68,6 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    (document).ready(function() {
-$('.chat').click(function(evento) {
-$('.panelmsg').val().hide(2000);
-});
-});
-});
-
 
 
 var foto = ["logocodeacademy.png", "raymi.jpg", 
@@ -90,10 +81,12 @@ var nombre = ["Laboratoria Perú", "Raymi Saldomando",
 // dar click y cambiar de imagen en el titular
 $(".chat").click(function(){
     var data = $(this).attr("data");
-    $(".msgs").remove();
-    // var imagen ="image/"+foto[data];
-    $("#hablando").html('<img src="image/' + foto[data] + ' "class="media-object contact">');
-    $("#titulo").html("<h5>" + nombre[data] + "</h5>");
+
+    $(".panelmsg").removeClass("visible");
+    $("#msg-group-"+data).addClass("visible");
+    var imagen ="image/"+foto[data];
+    $(".contact").attr('src', imagen);
+    $(".media-body h4").text(nombre[data]);
     
 });
 
